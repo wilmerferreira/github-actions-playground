@@ -2,26 +2,26 @@ name: Default workflow
 on: [push]
 
 jobs:
-  first-job:
+  linux-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Operative system
-        run: echo "Linux"
       - name: Runner's name
         run: hostname
+      - name: Operative system
+        run: cat /etc/os-release
 
-  second-job:
+  mac-job:
     runs-on: macos-latest
     steps:
-      - name: Operative system
-        run: echo "MacOS"
       - name: Runner's name
         run: hostname
+      - name: Operative system
+        run: sw_vers
 
-  third-job:
+  windows-job:
     runs-on: windows-latest
     steps:
-      - name: Operative system
-        run: echo "Windows"
       - name: Runner's name
         run: hostname
+      - name: Operative system
+        run: systeminfo | findstr /B /C:"OS Name" /B /C:"OS Version"
