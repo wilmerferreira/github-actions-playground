@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Operative system
-        run: Linux
+        run: echo "Linux"
       - name: Runner's name
         run: hostname
 
@@ -14,7 +14,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Operative system
-        run: MacOS
+        run: echo "MacOS"
       - name: Runner's name
         run: hostname
 
@@ -22,6 +22,6 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Operative system
-        run: Windows
+        run: echo "Windows"
       - name: Runner's name
         run: hostname
