@@ -1,0 +1,27 @@
+name: Default workflow
+on: [push]
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Operative system
+        run: Linux
+      - name: Runner's name
+        run: hostname
+
+  second-job:
+    runs-on: macos-latest
+    steps:
+      - name: Operative system
+        run: MacOS
+      - name: Runner's name
+        run: hostname
+
+  third-job:
+    runs-on: windows-latest
+    steps:
+      - name: Operative system
+        run: Windows
+      - name: Runner's name
+        run: hostname
